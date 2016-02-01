@@ -21,5 +21,10 @@
     },
     "target-dir" : "ThinkBig/Bundle/EntityTransformBundle",
     "repositories" : [{
-    }]
+    }],
+    "extra" : {
+    "branch-alias" : {
+            "dev-master" : "some_version-dev"
+        }
+    }
 }
