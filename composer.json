@@ -1,0 +1,25 @@
+{
+    "name" : "thinkbig/entity-transform-bundle",
+    "description" : "Symfony2 form entity transformation",
+    "type" : "symfony-bundle",
+    "authors" : [{
+        "name" : "dzsii",
+        "email" : "gabor@thinkbig.hu"
+    }],
+    "keywords" : [
+        "entity transform bundle"
+    ],
+    "license" : [
+        "MIT"
+    ],
+    "require" : {
+    },
+    "autoload" : {
+        "psr-0" : {
+            "ThinkBig\\Bundle\\EntityTransformBundle" : ""
+        }
+    },
+    "target-dir" : "ThinkBig/Bundle/EntityTransformBundle",
+    "repositories" : [{
+    }]
+}
