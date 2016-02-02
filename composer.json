@@ -22,7 +22,6 @@
             "ThinkBig\\Bundle\\EntityTransformBundle\\" : "src/"
         }
     },
-    "target-dir" : "ThinkBig/Bundle/EntityTransformBundle",
     "repositories" : [{
     }],
     "extra" : {
