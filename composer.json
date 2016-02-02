@@ -19,7 +19,7 @@
     },
     "autoload" : {
         "psr-4" : {
-            "ThinkBig\\Bundle\\EntityTransformBundle\\" : "src/"
+            "ThinkBig\\Bundle\\EntityTransformBundle\\" : ""
         }
     },
     "repositories" : [{
