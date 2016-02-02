@@ -13,18 +13,18 @@
         "MIT"
     ],
     "require" : {
+
+        "php": ">=5.4.0"
+
     },
     "autoload" : {
-        "psr-0" : {
-            "ThinkBig\\Bundle\\EntityTransformBundle" : ""
+        "psr-4" : {
+            "ThinkBig\\Bundle\\EntityTransformBundle\\" : "src/"
         }
     },
     "target-dir" : "ThinkBig/Bundle/EntityTransformBundle",
     "repositories" : [{
     }],
     "extra" : {
-    "branch-alias" : {
-            "dev-master" : "some_version-dev"
-        }
     }
 }
