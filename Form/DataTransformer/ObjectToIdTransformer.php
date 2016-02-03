@@ -69,7 +69,7 @@ class ObjectToIdTransformer implements DataTransformerInterface
             throw new TransformationFailedException(sprintf(
                 'An instance of "%s" with %s "%s" does not exist!',
                 $this->objectClass,
-                $this->objectFiled,
+                $this->objectField,
                 $value
             ));
         }
