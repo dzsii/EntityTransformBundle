@@ -15,6 +15,8 @@ use Symfony\Component\Form\FormInterface;
 use Symfony\Component\Form\FormEvents;
 use Symfony\Component\Form\FormEvent;
 
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
+
 class EntityHiddenType extends AbstractType
 {
     /**
@@ -46,14 +48,18 @@ class EntityHiddenType extends AbstractType
         $transformer = new ObjectToIdTransformer($this->om);
         $builder->addModelTransformer($transformer);
 
+        dump($options);
+
         if($options['class'] === null) {
 
             $builder->addEventListener(FormEvents::PRE_SET_DATA, function(FormEvent $event) use ($transformer, $builder) {
 
                 /* @var $form \Symfony\Component\Form\Form */
                 $form = $event->getForm();
+
                 $class = $form->getParent()->getConfig()->getDataClass();
                 $property = $form->getName();
+                
                 $guessedType = $this->guesser->guessType($class, $property);
                 $options = $guessedType->getOptions();
 
@@ -79,7 +85,7 @@ class EntityHiddenType extends AbstractType
 
     public function getParent()
     {
-        return 'hidden';
+        return HiddenType::class;
     }
 
 
