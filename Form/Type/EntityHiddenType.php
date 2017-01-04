@@ -48,7 +48,7 @@ class EntityHiddenType extends AbstractType
         $transformer = new ObjectToIdTransformer($this->om);
         $builder->addModelTransformer($transformer);
 
-        dump($options);
+        //dump($options);
 
         if($options['class'] === null) {
 
