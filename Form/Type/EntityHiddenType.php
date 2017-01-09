@@ -48,8 +48,6 @@ class EntityHiddenType extends AbstractType
         $transformer = new ObjectToIdTransformer($this->om);
         $builder->addModelTransformer($transformer);
 
-        //dump($options);
-
         if($options['class'] === null) {
 
             $builder->addEventListener(FormEvents::PRE_SET_DATA, function(FormEvent $event) use ($transformer, $builder) {
