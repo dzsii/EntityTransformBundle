@@ -10,6 +10,20 @@
             <argument type="service" id="form.type_guesser.doctrine" />
             <tag name="form.type" alias="entity_hidden" />
         </service>
+        <service id="think_big_entity_transform.form.type.mapped_entity" class="ThinkBig\Bundle\EntityTransformBundle\Form\Type\MappedEntityType">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument type="service" id="thinkbig.mapping_manager" />
+            <tag name="form.type" alias="mapped_entity" />
+        </service>
+        <service id="thinkbig.mapping_manager" class="ThinkBig\Bundle\EntityTransformBundle\Service\EntityMappingManager">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument type="service" id="form.type_guesser.doctrine" />
+        </service>
+
+        <service id="thinkbig.mapping_listenner" class="ThinkBig\Bundle\EntityTransformBundle\EventListener\EntityMappingListener">
+            <tag name="doctrine.event_listener" event="postPersist" />
+        </service>
+
     </services>
     
 </container>

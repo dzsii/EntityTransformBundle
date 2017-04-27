@@ -22,16 +22,16 @@ class EntityHiddenType extends AbstractType
     /**
      * @var ObjectManager
      */
-    private $om;
+    private $entityManager;
     private $guesser;
 
     /**
-     * @param ObjectManager $om
+     * @param ObjectManager $entityManager
      */
-    public function __construct(ObjectManager $om, DoctrineOrmTypeGuesser $guesser)
+    public function __construct(ObjectManager $entityManager, DoctrineOrmTypeGuesser $guesser)
     {
-        $this->om = $om;
-        $this->guesser = $guesser;
+        $this->om       = $entityManager;
+        $this->guesser  = $guesser;
     }
 
     public function configureOptions(OptionsResolver $resolver)
