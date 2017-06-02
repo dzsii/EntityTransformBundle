@@ -20,10 +20,6 @@
             <argument type="service" id="form.type_guesser.doctrine" />
         </service>
 
-        <service id="thinkbig.mapping_listenner" class="ThinkBig\Bundle\EntityTransformBundle\EventListener\EntityMappingListener">
-            <tag name="doctrine.event_listener" event="postPersist" />
-        </service>
-
     </services>
     
 </container>
